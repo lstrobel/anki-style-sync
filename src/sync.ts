@@ -38,7 +38,7 @@ async function invoke(
 (async () => {
   const modelName = process.argv[2];
   if (!modelName) {
-    console.error('Usage: node sync.js <modelName>');
+    console.error('Usage: npm run watch -- <modelName>');
     process.exit(1);
   }
 

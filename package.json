@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "sass --watch src/style.scss:dist/style.css --no-source-map & tsx watch --include dist/style.css --clear-screen=false src/sync.ts",
-    "get-models": "tsx src/get-model-names.ts",
+    "watch": "sass --watch src/style.scss:dist/style.css --no-source-map & tsx watch --include dist/style.css --clear-screen=false src/sync.ts",
+    "list-models": "tsx src/get-model-names.ts",
     "format": "prettier --write ."
   },
   "devDependencies": {
