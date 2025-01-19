@@ -1,0 +1,34 @@
+.mac {
+  // Way better on retina displays
+  -webkit-font-smoothing: antialiased;
+}
+
+$font-family:
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Windows
+  'Segoe UI',
+  // Android
+  Roboto,
+  // older macOS and iOS
+  'Helvetica Neue',
+  // Linux
+  'Noto Sans',
+  'Liberation Sans',
+  // Basic web fallback
+  Arial,
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+.card {
+  font-family: $font-family;
+  font-size: 1.4rem;
+  text-align: center;
+  color: black;
+  background-color: white;
+}

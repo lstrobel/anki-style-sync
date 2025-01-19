@@ -1,0 +1,18 @@
+{
+  "name": "anki-style-sync",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sass --watch src/style.scss:dist/style.css --no-source-map & tsx watch --include dist/style.css --clear-screen=false src/sync.ts",
+    "get-models": "tsx src/get-model-names.ts",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "sass": "^1.83.4",
+    "tsx": "^4.19.2",
+    "typescript": "~5.6.2",
+    "prettier": "^2.8.8"
+  }
+}
