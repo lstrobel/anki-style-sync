@@ -1,7 +1,4 @@
-.mac {
-  // Way better on retina displays
-  -webkit-font-smoothing: antialiased;
-}
+$card-width: 720px;
 
 $font-family:
   // Cross-platform generic font family (default user interface font)
@@ -25,10 +22,91 @@ $font-family:
   'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
 .card {
+  --fg: #262626;
+  --bg: #e5e5e5;
+  --bg-elevated: #fafafa;
+  --shadow: rgba(0, 0, 0, 0.075);
+}
+
+.card.nightMode {
+  --fg: #fafafa;
+  --bg: #262626;
+  --bg-elevated: #404040;
+  --shadow: rgba(0, 0, 0, 0.075);
+}
+
+#content,
+body {
+  margin: 0 !important;
+  background-color: var(--bg) !important;
+}
+
+#qa {
   font-family: $font-family;
+  font-weight: normal;
   font-size: 1.4rem;
-  text-align: center;
-  color: black;
-  background-color: white;
+  line-height: 1.4;
+
+  color: var(--fg);
+  background-color: var(--bg-elevated);
+
+  max-width: $card-width;
+
+  margin-top: 1.5rem;
+  margin-inline: auto;
+  padding: 1.5rem 2rem;
+
+  box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: $card-width) {
+  #qa {
+    border-radius: 0;
+  }
+}
+
+hr {
+  all: unset;
+
+  display: block;
+  height: 1px;
+  background: var(--fg);
+  margin: 1rem -1rem;
+}
+
+img,
+video {
+  max-width: 100%;
+  max-height: 400px;
+
+  box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  border-radius: 0.5rem;
+
+  .nightMode & {
+    border: none;
+  }
+}
+
+.replay-button {
+  svg {
+    width: 2.2rem;
+    margin-top: -3px;
+
+    path {
+      fill: var(--fg);
+    }
+
+    circle {
+      fill: var(--bg);
+      stroke: var(--fg);
+    }
+  }
 }
